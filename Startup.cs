@@ -5,9 +5,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using TodoApi.Models;
+using RequestsApi.Models;
 
-namespace TodoApi
+namespace RequestsApi
 {
     public class Startup
     {
@@ -29,7 +29,7 @@ namespace TodoApi
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
             });
 
-            services.AddDbContext<TodoContext>(options => options.UseInMemoryDatabase("TodoList"));
+            services.AddDbContext<RequestsContext>(options => options.UseInMemoryDatabase("RequestsList"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,6 +1,6 @@
-﻿namespace TodoApi.Models
+﻿namespace RequestsApi.Models
 {
-    public class TodoItem
+    public class RequestsItem
     {
         public long Id { get; set; }
         public string Name { get; set; }
